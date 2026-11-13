@@ -1,0 +1,34 @@
+/* Compliance values intentionally use the theme's normal text color instead of
+ * inheriting the visual emphasis of the main WooCommerce price. */
+.cwpc-price-compliance {
+	color: inherit;
+}
+
+.cwpc-price-compliance .woocommerce-Price-amount,
+.cwpc-price-compliance .amount,
+.cwpc-price-compliance .woocommerce-Price-currencySymbol {
+	color: inherit !important;
+}
+
+/* Catalog/shop: WooCommerce renders this immediately after the main price. */
+.cwpc-price-compliance.cwpc-loop {
+	display: block;
+	font-size: 0.7em;
+	line-height: 1.4;
+	margin-top: 0.35em;
+	font-weight: 400;
+}
+
+.cwpc-price-compliance.cwpc-loop .cwpc-lowest-slot,
+.cwpc-price-compliance.cwpc-loop .cwpc-anchor-slot,
+.cwpc-price-compliance.cwpc-loop .cwpc-lowest-price,
+.cwpc-price-compliance.cwpc-loop .cwpc-reference-price {
+	display: block;
+}
+
+/* Prevent themes from re-applying the main price typography to nested amounts. */
+.cwpc-price-compliance.cwpc-loop .woocommerce-Price-amount,
+.cwpc-price-compliance.cwpc-loop .amount {
+	font-size: inherit !important;
+	line-height: inherit;
+}
